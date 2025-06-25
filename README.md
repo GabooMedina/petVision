@@ -1,39 +1,60 @@
-# Clasificación de perros y gatos
+# 🐾 Clasificador de Perros y Gatos en Tiempo Real
 
-Este código fuente sirve como apoyo para el video de exportación de modelos de Tensorflow a Tensorflow.js, del canal de YouTube [Ringa Tech](https://youtube.com/RingaTech)
+<div align="center">
+  <img src="https://img.icons8.com/color/96/000000/dog--v1.png" width="50">
+  <img src="https://img.icons8.com/color/96/000000/cat--v1.png" width="50">
+</div>
 
-Se trata de un clasificador en tiempo real de perros y gatos con imágenes a color. Puede utilizarse en el celular, solo apunta la cámara al perro o gato que quieres clasificar (puede ser una imagen de la computadora, una foto, o uno de verdad), lo hace todo en el explorador utilizando Tensorflow.js, en base aun modelo entrenado en Python con Tensorflow
+Proyecto de **clasificación en tiempo real** de perros 🐕 y gatos 🐈 con imágenes a color. ¡Funciona directamente en tu navegador!  
 
-## Probar en vivo
-Puedes probar este proyecto en vivo [aquí](https://ringa-tech.com/exportacion/perros-gatos/)
+✨ **Características principales:**  
+- 📱 Compatible con móviles (apunta tu cámara)  
+- 🖥️ Funciona con imágenes de computadora  
+- ⚡ Procesamiento 100% en el navegador con TensorFlow.js  
+- 🧠 Modelo pre-entrenado con Python/TensorFlow  
 
-## Cómo utilizarlo
+---
 
-### Descargar el repositorio
-Descarga el repositorio donde gustes en tu computadora
+## 🌐 Demo en Vivo  
+¡Pruébalo ahora mismo! 👉 [Demo Online](https://ringa-tech.com/exportacion/perros-gatos/)  
 
-### Inicia un servidor en la carpeta
-Este proyecto utiliza un modelo de Tensorflow.js, el cual para cargarse requiere que el acceso sea por medio de http/https.
-Para eso puedes usar cualquier servidor, pero aquí hay una forma de hacerlo:
-- Descarga Python en tu computadora
-- Abre una línea de comandos o terminal
-- Navega hasta la carpeta donde descargaste el repositorio
-- Ejecuta el comando `python -m http.server 8000`
-- Abre un explorador y ve a http://localhost:8000
+---
 
-### Utilizarlo en un celular
-Si quieres abrirlo en tu celular, no se puede solo poner la IP local de tu computadora y el puerto, ya que para usar la cámara se requiere HTTPS. Puedes hacer un túnel de HTTPS siguiendo los siguientes pasos
-- Descarga ngrok en tu computadora, y descomprímelo
-- Abre una línea de comandos o terminal
-- Navega hasta la carpeta donde descargaste ngrok
-- Ejecuta el comando `ngrok http 8000`
-- Es importante tener ambos activos: El servidor de python, y el túnel de ngrok
-- En la línea de comandos aparecerá un enlace HTTPS. Puedes entrar ahí con tu celular, no importa si no estás en la red local.
-- El túnel expira después de 2 horas creo, en dado caso solo reinicias ngrok
-- Abre un explorador en tu celular y ve al enlace HTTPS indicado
+## 🛠 Cómo Usarlo
 
-### Uso
-Puedes dar clic en el botón de "Cambiar camara" para utilizar la cámara delantera o trasera del celular. Solo apunta la cámara a un perro o gato, y abajo te aparecerá la predicción. Tampoco es el clasificador del futuro entonces si no clasifica perfecto, oops.
+##### 📥 Instalación Local
+```bash
+# 1. Clona el repositorio
+git clone https://github.com/GabooMedina/petVision.git
 
-## Problemas
-Si tienes un problema, regístralo aquí o déjame un comentario en el video de Youtube. Asegúrate de primero revisar la consola de desarrollador de tu explorador para ver si puedes identificar el problema.
+# 2. Ve al directorio
+cd perros-gatos
+
+# 3. Inicia el servidor (Python 3+)
+python -m http.server 8000
+```
+
+##### 🌍 Accede desde:
+http://localhost:8000
+
+##### 📱 Uso en Móvil (via ngrok)
+
+ 1. Descarga ngrok (https://ngrok.com/download)
+ 2. Ejecuta (en otra terminal)
+ ```bash
+ngrok http 8000
+```
+🔗 Copia la URL HTTPS que aparece en la terminal de ngrok y ábrela en tu móvil.
+
+### 🎮 Modo de Uso
+Permite el acceso a la cámara 📷
+
+Apunta a un perro/gato (¡o usa una foto!)
+
+Mira la predicción en tiempo real �
+
+Cambia entre cámaras con el botón 🔄
+
+
+### 🧠 Tecnologías Usadas
+<p align=""> <img src="https://img.shields.io/badge/TensorFlow.js-FF6F00?logo=tensorflow&logoColor=white" alt="TensorFlow.js"> <img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white" alt="Python"> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black" alt="JavaScript"> </p>
